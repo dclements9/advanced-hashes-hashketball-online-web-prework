@@ -170,4 +170,16 @@ def player_stats(player)
   end
 end
 
-player_stats("Reggie Evans")
+def big_shoe_rebounds
+    largest_shoes = 0
+    rebounds = 0 
+  game_hash.each do |location, team_data|
+      team_data[:players].each do |player, data|
+          if data[:shoe] > largest_shoes
+            largest_shoes = data[:shoe]
+            rebounds = data[:rebounds]
+      end
+    end
+  end
+  rebounds
+end
