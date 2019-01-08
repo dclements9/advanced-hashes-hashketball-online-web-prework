@@ -124,4 +124,4 @@ def num_points_scored(player_name)
         team_data[:players][player_name][:points]
     end
  end
-end  
+end
