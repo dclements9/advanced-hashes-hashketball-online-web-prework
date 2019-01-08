@@ -161,3 +161,12 @@ def player_numbers(team_name)
   end
   jersey_number_array
 end
+
+def player_stats(player)
+  game_hash.each do |location, team_data|
+    if team_data[:players].has_key?(player)
+      return team_data[:players][player]
+      binding.pry
+    end
+  end
+end
