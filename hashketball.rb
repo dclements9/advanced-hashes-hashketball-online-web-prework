@@ -136,7 +136,7 @@ end
 
 def team_colors (team_name)
   game_hash.each do |location, team_data|
-    if team_data.has_key?(team_name)
+    if team_data[:team_name].has_key?(team_name)
       return team_data[team_name][:colors]
 end
 end
