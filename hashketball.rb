@@ -171,4 +171,4 @@ def player_stats(player)
   end
 end
 
-player_stats
+player_stats(Reggie Evans)
