@@ -139,3 +139,5 @@ def team_colors (team_name)
     if team_data.has_key?(team_name)
       return team_data[team_name][:colors]
 end
+end
+end
