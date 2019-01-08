@@ -154,7 +154,7 @@ def player_numbers(team_name)
   jersey_number_array = []
   game_hash.each do |location, team_data|
     if team_data[:team_name] == team_name
-      team_data[:players].each do |player, data|
+      team_data[:players].each do |player_name, data|
         jersey_number_array << data[:number]
       end
     end
@@ -162,10 +162,10 @@ def player_numbers(team_name)
   jersey_number_array
 end
 
-def player_stats(player)
+def player_stats(player_name)
   game_hash.each do |location, team_data|
-    if team_data[:players].has_key?(player)
-      return team_data[:players][player]
+    if team_data[:players].has_key?(player_name)
+      return team_data[:players][player_name]
     end
   end
 end
@@ -174,7 +174,7 @@ def big_shoe_rebounds
     largest_shoes = 0
     rebounds = 0
   game_hash.each do |location, team_data|
-      team_data[:players].each do |player, data|
+      team_data[:players].each do |player_name, data|
           if data[:shoe] > largest_shoes
             largest_shoes = data[:shoe]
             rebounds = data[:rebounds]
